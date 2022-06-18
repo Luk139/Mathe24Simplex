@@ -1,3 +1,3 @@
 # Mathe24Simplex
 
-Hier ist das Repository zu der LaTeX Erstellung von Gruppe 24 in Mathe 2 
+Das hier ist das Repository zu der LaTeX file von der Gruppe 24 in Mathe 2 zum Thema Simplex Personaleinsatzplanung.
