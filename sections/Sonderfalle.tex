@@ -1,7 +1,7 @@
 \section{Sonderfälle}
 \subsection{Einführung}
 Beim Lösen der linearen Optimierungsprobleme können verschiedene Sonderfälle auftreten. Hierbei kann es zu unendlich vielen oder keiner optimalen oder zulässigen Lösung kommen.
-Es gibt vier verschiedene Sonderfälle: die unbeschränkte Lösung, mehrere optimale Lösungen, keine zulässige Lösung und die degenerierte Lösung, welche im Folgendem genauer beschrieben werden.\\\\
+Es gibt vier verschiedene Sonderfälle: die unbeschränkte Lösung, mehrere optimale Lösungen, keine zulässige Lösung und die degenerierte Lösung, welche nachfolgend genauer beschrieben werden.\\\\
 \textbf{Unbeschränkte Lösung:}\\\\
 Der Fall der unbeschränkten Lösung tritt auf, wenn es zur Wahl der Pivotzeile kommt. Wie bereits zuvor beschrieben, wird diese ermittelt, indem die Werte aus der Pivotspalte durch die dazugehörigen Werte aus der rechten Spalte dividiert werden. Jedoch müssen die Werte der Pivotspalte hierfür größer Null sein. Ist dies nicht gegeben, kann keine geeignete Pivotzeile bestimmt werden und es gibt somit keine optimale Lösung des Problems.
 \\\\
@@ -40,10 +40,10 @@ Zeile                     & $x_1$                        & $x_2$                
 \end{table}
 \\
 In diesem Beispiel kann der erste Iterationsschritt noch normal ausgeführt werden. Bei dem zweiten Iterationsschritt stößt man jedoch auf ausschließlich negative Werte in der Pivotspalte - somit kann keine optimale Lösung ermittelt werden.
-\\
+\\\\\\
 \textbf{Mehrere optimale Lösungen (unendlich viele Lösungen):}\\
 In diesem Fall kann es mehrere optimale Lösungen des Optimierungsproblems geben. Dies wird im Optimaltableau erkennbar, wenn mindestens ein Wert in der Zeile der Zielfunktion einer Nichtbasisvariablen den Wert Null hat. Nimmt man diese mit in die Basis auf, ergibt sich eine weitere optimale Lösung.
-\\
+\\\\
 \textbf{Beispiel:}\\
 Zielfunktion: max \begin{math}Z = 3*x_1+3*x_2\end{math}\\
 Nebenbedingungen:\\
@@ -98,10 +98,10 @@ Zeile                     & $x_1$ & $x_2$ & $s_1$   & $s_2$ & $s_3$ & RS & Rechn
 \end{tabular}
 \end{table}
 \\
-Würde man diesen Fall graphisch betrachten, wäre erkennbar, dass die Zielfunktion parallel zu einer Restriktion verläuft. Hier gibt es zwei Punkte, die gleichermaßen optimal sind. Alle Werte, welche zwischen diesen beiden Punkten liegen, sind dann ebenso optimal.\\
+Würde man diesen Fall graphisch betrachten, wäre erkennbar, dass die Zielfunktion parallel zu einer Restriktion verläuft. Hier gibt es zwei Punkte, die gleichermaßen optimal sind. Alle Werte, welche zwischen diesen beiden Punkten liegen, sind dann ebenso optimal.\\\\\\
 \textbf{Keine zulässige Lösung: }\\
-Es gibt keine zulässige Lösung, wenn der zulässige Bereich leer ist. Zu diesem Fall kommt es, wenn sich zwei oder mehr Nebenbedingungen widersprechen.\\
-Beispiel:\\
+Es gibt keine zulässige Lösung, wenn der zulässige Bereich leer ist. Zu diesem Fall kommt es, wenn sich zwei oder mehr Nebenbedingungen widersprechen.\\\\
+\textbf {Beispiel:}\\
 Zielfunktion: \begin{math}max Z = 6*x_1+4*x_2\end{math}\\
 Nebenbedingungen:\\
 \begin{math}
@@ -141,9 +141,9 @@ Zeile                      & $x_1$                            & $x_2$           
 \end{tabular}
 \end{table}
 \\
-Die künstliche Variable lässt sich nicht herausrechnen, da in der Z2 Zeile keine negativen Werte mehr vorhanden sind. Die Zeile Z2 und die Zeile 3 schließen sich gegenseitig aus, wodurch kein Bereich gefunden werden kann, in dem ein valides Optimum existiert. Es gibt für dieses Optimierungsproblem also keine zulässige Lösung.\\
+Die künstliche Variable lässt sich nicht herausrechnen, da in der Z2 Zeile keine negativen Werte mehr vorhanden sind. Die Zeile Z2 und die Zeile 3 schließen sich gegenseitig aus, wodurch kein Bereich gefunden werden kann, in dem ein valides Optimum existiert. Es gibt für dieses Optimierungsproblem also keine zulässige Lösung.\\\\\\
 \textbf{Degenerierte Lösung: }\\
-In diesem Fall existieren mehrere optimale Lösungen, da eine oder mehrere Basisvariablen bereits von Beginn an Null sind. Dadurch kommt es zu keiner Veränderung der rechten Seite des Tableaus, wenn ein Iterationsschritt ausgeführt wird.\\
+In diesem Fall existieren mehrere optimale Lösungen, da eine oder mehrere Basisvariablen bereits von Beginn an Null sind. Dadurch kommt es zu keiner Veränderung der rechten Seite des Tableaus, wenn ein Iterationsschritt ausgeführt wird.\\\\
 \textbf{Beispiel: }\\
 Zielfunktion: max Z = 2*$x_1$+2*$x_2$\\
 \\

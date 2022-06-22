@@ -1,11 +1,14 @@
 \section{Aufgabenstellung}
-Da wir nun wissen wie man das Simplexverfahren anhand eines einfachen Problems anwendet und auf welche Sonderfälle man achten muss, setzen wir uns nun an ein größeres und komplizierteres Problem. Hier geht es um ein Minimierungsproblem mit mehreren Nebenbedingungen. 
+Nachdem wir an einem einfachen Beispiel den Simplex-Algorithmus und seine Sonderfälle dargestellt haben, wenden wir uns der Aufgabenstellung zu.
+Hierbei geht es um ein Minimierungsproblem mit mehreren Nebenbedingungen. 
 \subsection{Ziele des Projekts}
-Die Aufgabe ist das Optimieren des Problems einer Personaleinsatzplanung.\\
-Ein metallverarbeitendes Unternehmen im Oberberg benötigt für die Produktion -rund um die Uhr- Arbeiter.\\
+Die Aufgabe ist das Optimieren einer Personaleinsatzplanung.\\
+Ein metallverarbeitendes Unternehmen in Oberberg benötigt für die Produktion -rund um die Uhr- Arbeiter.\\
 Jeder Arbeiter arbeitet 4 Stunden, macht eine gewerkschaftliche Stunde Pause und arbeitet danach weitere 4 Stunden.\\
-Die Arbeitszeit ann zu jeder beliebigen Stunde beginnen und wird mit 10€/Stunde bezahlt, es gibt einen Zuschlag von 2,50€/Stunde für Schichten in der Nacht von 10 Uhr abends bis 6 Uhr morgens.\\
-Die hier gegebenen Nebenbedingung ist der Bedarf an Arbeitern zu bestimmten Urzeiten.\\
+Die Arbeitszeit kann zu jeder beliebigen Stunde beginnen und wird mit 10€/Stunde bezahlt, es gibt einen Zuschlag von 2,50€/Stunde für Schichten in der Nacht von 10 Uhr abends bis 6 Uhr morgens.\\
+\\
+Die hier gegebenen Nebenbedingungen sind der Bedarf an Arbeitern zu bestimmten Uhrzeiten.\\
+\\\\
 12 Uhr nachts bis 6 Uhr morgens mindestens 2\\
 6 Uhr morgens bis 10 Uhr morgens mindestens 8\\
 10 Uhr morgens bis 12 Uhr mittags mindestens 4\\
@@ -14,5 +17,5 @@ Die hier gegebenen Nebenbedingung ist der Bedarf an Arbeitern zu bestimmten Urze
 6 Uhr nachmittags bis 10 Uhr abends mindestens 5\\
 10 Uhr abends bis 12 Uhr nachts mindestens 3\\
 \\\\
-Unter Berücksichtigung dieser Bedingungen, wie soll der Personaleinsatz geplant werden, wenn das Ziel heißt, die Anzahl der Arbeiter und damit die Kosten zu minimieren?
-
+Die Zielfunktion ergibt sich aus dem Lohn, der für die jeweilige Schicht gezahlt werden muss (Koeffizient) und der Anzahl der Arbeiter, die für diese Schicht eingestellt werden müssen $(x_1-x{24})$.\\
+Daraus resultiert folgende Zielfunktion: $z = 90*x_1 + 90*x_2 + 87.5*x_3 + 85*x_4 + 82.5*x_5 + 80*x_6 + 80*x_7 + 80*x_8 + 80*x_9 + 80*x_{10} + 80*x_{11} + 80*x_{12} + 80*x_{13} + 82.5*x_{14} + 85*x_{15} + 87.5*x_{16} + 90*x_{17} + 90*x_{18} + 92.5*x_{19} + 95*x_{20} + 97.5*x_{21} + 97.5*x_{22} + 95*x_{23} + 92.5*x_{24}$
